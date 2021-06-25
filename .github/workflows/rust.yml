@@ -1,0 +1,25 @@
+name: Rust
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: cargo build --verbose
+    - name: Run tests
+      run: cargo test --verbose
+    - name: Rust Action
+    # uses: icepuma/rust-action@2cdd15a5df51c45e27fcb56517f7b678cd899f7f
+      uses: icepuma/rust-action@1.53.0
