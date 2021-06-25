@@ -15,7 +15,7 @@ fn main() -> Result<(), Error> {
 
     let window = WindowBuilder::new().build(&event_loop).unwrap();
 
-    window.set_title("test");
+    window.set_title("Game of life");
 
     let mut width = 600;
     let mut height = 400;
